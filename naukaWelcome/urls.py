@@ -23,7 +23,7 @@ from srk import views
 
 
 urlpatterns = [
-    path('', views.home, name='home'),#нэйм - ссылка на название вью
+    path('', views.empl_list, name='empl_list'),
     path('empl_list/', views.empl_list, name ='empl_list'),
     path('empl_upload/', views.empl_upload, name ='empl_upload'),
     path('<int:pk>/', views.delete_empl, name ='delete_empl'),
@@ -31,9 +31,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 ]
-
-#urlpatterns = [
-#    url(r'^edit/(?P<pk>\d+)$', views.empl_upload, name='empl_upload'),]
 
 if settings.DEBUG: #Специальное вью из джанго.конф для генерации ссылок на медиа-файлы
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

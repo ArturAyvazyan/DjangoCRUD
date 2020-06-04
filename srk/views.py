@@ -1,4 +1,3 @@
-#learn to django.shortcuts
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, ListView, CreateView
 from django.core.files.storage import FileSystemStorage
@@ -7,7 +6,7 @@ from django.http import HttpResponseRedirect
 
 from .forms import emplForm
 from .models import Employee
-#What is forms
+
 
 def home(request):
     return render(request, 'home.html',)
@@ -33,7 +32,7 @@ def empl_upload(request):
     })
 
 
-def delete_empl(request, pk): # Whar does pk mean
+def delete_empl(request, pk): 
     if request.method =="POST":
         Employees = Employee.objects.get(pk=pk)
         Employees.delete()
