@@ -6,8 +6,6 @@ django-contrib-comments==1.9.2
 django-cors-headers==3.5.0
 django-crispy-forms==1.9.1
 django-filter==2.4.0
-django-heroku==0.3.1
-django-imagekit==4.0.2
 django-phonenumber-field==4.0.0
 django-storages==1.10.1
 djangorestframework==3.11.0
